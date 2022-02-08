@@ -1,0 +1,41 @@
+yarn init
+
+yarn add express
+
+yarn add typescript
+
+yarn tsc --init
+
+configurei o arquivo tsconfig.json para enviar os resultados para as pastas que desejo
+
+yarn tsc -------- para salvar.
+
+yarn add @types/express -D -------- para salvar a declaração de tipos
+--------- sempre que acontecer o erro no .TS podemos usar esse codigo com o nome da lib que da o erro
+--------- como dependencia de desenvolvimento
+
+yarn tsc   --------- para converter o arquivo ts para js
+
+criei um script {"build": "tsc"} no package.json
+
+yarn add ts-node-dev -D  ---------  parece o nodemon
+--------- configurei para acesso rapido no package.json
+--------- yarn dev:server --------------- para rodar ------ e não gerou nenhuma pasta "dist", estrutura do js
+------ irei passar algumas propriedades do package.json para torna-lo ainda um pouco mais rapido
+      --transpileOnly  ------------ não vai verificar se o nosso códgo ta errado
+      --ignore-watch node_modules --------- vai evitar que tente compilar o que esta na pasta node_modules
+      --ignore node_modules **************
+      --transpile-only  *********
+
+
+configurando eslint
+yarn add eslint -D
+
+usei npm para instalar as coisas so eslint, pois não consegui com meu yarn
+
+configurei meu settings.json para quando eu salvar automaticamente fazer alteraçoes do eslint
+
+configurei meu .eslintrc.json para não dar erros com arquivos .ts
+e também para não dar erros com importaçoes de arquivos ts. ou ao menos mostrar
+
+criado um arquivo .eslintignor e la sera ignorado os arquivos cuvo eu não quero que ocorra alteraçoes
